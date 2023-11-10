@@ -1,7 +1,7 @@
 // hourly_forecast.dart
 
 import 'package:flutter/material.dart';
-import '../data/weather_data.dart';
+import '../../data/weather_data.dart';
 
 class HourlyWeatherWidget extends StatelessWidget {
   final List<HourlyWeather> forecasts;
@@ -49,14 +49,14 @@ class HourlyWeatherWidget extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  Icon(
-                    forecast.weatherIcon,
+                  const Icon(
+                    Icons.sunny,
                     color: Colors.black,
                     size: 32,
                   ),
-                  Text(
-                    forecast.hourLabel,
-                    style: const TextStyle(
+                  const Text(
+                    '11:00',
+                    style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                     ),

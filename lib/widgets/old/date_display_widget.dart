@@ -1,9 +1,27 @@
 //date_display_widget.dart
 
+// old
+// Container(
+//       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 2.0),
+//       height: 26.0,
+//       alignment: Alignment.center,
+//       decoration: BoxDecoration(
+//         color: Colors.black,
+//         borderRadius: BorderRadius.circular(20),
+//       ),
+//       child: Text(
+//         formattedDate,
+//         style: TextStyle(
+//             color: forecast.weatherColor,
+//             fontSize: 14,
+//             fontWeight: FontWeight.w600),
+//       ),
+//     );
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import '../data/weather_data.dart';
+import '../../data/weather_data.dart';
 
 class DateDisplayWidget extends StatelessWidget {
   final HourlyWeather? forecast;

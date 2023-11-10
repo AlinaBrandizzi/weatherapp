@@ -1,7 +1,4 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +33,7 @@ class HomePage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                 child: Text(
-                  'Roma',
+                  'Giugliano in Campania',
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.w800),
                 ),
               ),
@@ -53,7 +50,7 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Text(
-                        'Venerdì, 10 Novembre',
+                        'Giovedì, 9 Novembre',
                         style: TextStyle(
                             color: Color(0xFFFFCA00),
                             fontSize: 14,
@@ -62,25 +59,25 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Text(
-                '22°',
+                '32°',
                 style: TextStyle(fontSize: 200, fontWeight: FontWeight.w400),
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
-                    Icons.thunderstorm,
+                    Icons.sunny,
                     color: Colors.black,
                     size: 30,
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 5, 5, 5),
                     child: Text(
-                      'Temporale',
+                      'Soleggiato',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w800),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -134,7 +131,7 @@ class HomePage extends StatelessWidget {
                               size: 40,
                             ),
                             Text(
-                              '91%',
+                              '48%',
                               style: TextStyle(
                                   color: Color(0xFFFFCA00),
                                   fontSize: 22,
@@ -178,73 +175,62 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
                   'Previsioni orarie',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,
-                      fontWeight: FontWeight.w700),
+                      fontWeight: FontWeight.w600),
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: const [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
+
+// inserire qui lista
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: Container(
+                    width: 100,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 4,
+                      ),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                      child: CustomCard(),
-                    ),
-                  ],
-                ),
+                    child: const Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            '43°',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.00, 0.00),
+                            child: Icon(
+                              Icons.cloud_sharp,
+                              color: Colors.black,
+                              size: 32,
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.00, 0.00),
+                            child: Text(
+                              '11:00',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 18),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
               )
             ],
           ),
